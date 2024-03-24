@@ -25,3 +25,13 @@ class RegisterPage:
 
     def is_register_button_visible(self):
         return self.driver.find_elements(By.ID, 'btnNavRegister')
+
+    def register_user(self, first_name, last_name, email, phone, password):
+        self.driver.find_element(By.NAME, "first_name").send_keys(first_name)
+        self.driver.find_element(By.NAME, "last_name").send_keys(last_name)
+        self.driver.find_element(By.NAME, "email").send_keys(email)
+        self.driver.find_element(By.NAME, "phone_1").send_keys(phone)
+        self.driver.find_element(By.NAME, "cellmatch").click()
+        self.driver.find_element(By.NAME, "cellmatch").send_keys(phone)
+        self.driver.find_element(By.NAME, "password").send_keys(password)
+        self.driver.find_element(By.NAME, "btnNavRegister").click()
