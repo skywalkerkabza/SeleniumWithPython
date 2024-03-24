@@ -24,6 +24,5 @@ class TestLogin(unittest.TestCase):
         self.register_page.wait_for_load()
         self.assertFalse(self.register_page.is_register_button_visible(), "Register button is still visible after clicking.")
 
-
 if __name__ == "__main__":
     unittest.main()

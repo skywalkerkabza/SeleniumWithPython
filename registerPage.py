@@ -16,7 +16,6 @@ class MainResPage:
         register_button = self.driver.find_element(By.ID, 'btnNavRegister')
         register_button.click()
 
-
 class RegisterPage:
     def __init__(self, driver):
         self.driver = driver
